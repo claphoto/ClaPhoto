@@ -3,86 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Portfolio Photo</title>
+  <title>Mes Galeries Photo</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #121212;
+      background-color: #0e0e0e;
       color: #ffffff;
       margin: 0;
-      padding: 40px 20px;
+      padding: 30px 15px;
     }
     header {
       text-align: center;
       margin-bottom: 40px;
     }
-    h1 { font-weight: 300; letter-spacing: 2px; }
-    .gallery {
+    h1 {
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    p {
+      color: #888888;
+      font-size: 0.95rem;
+    }
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
       margin: 0 auto;
     }
-    .photo-card {
-      background: #1e1e1e;
-      border-radius: 8px;
+    .album-card {
+      background: #181818;
+      border-radius: 12px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
     }
-    .photo-card img {
+    .album-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .album-card img {
       width: 100%;
-      height: 250px;
+      height: 220px;
       object-fit: cover;
+      display: block;
     }
-    .photo-info {
+    .album-info {
       padding: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .download-btn {
-      background-color: #ffffff;
-      color: #000000;
-      padding: 8px 16px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-size: 0.85rem;
-      font-weight: bold;
-      transition: background 0.2s;
+    .album-title {
+      font-weight: 600;
+      font-size: 1.1rem;
     }
-    .download-btn:hover {
-      background-color: #cccccc;
+    .lock-badge {
+      font-size: 0.8rem;
+      background: #2a2a2a;
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>GALERIE PHOTO</h1>
-    <p>Partage familial & clichés personnels</p>
+    <h1>GALERIES PHOTO</h1>
+    <p>Cliquez sur un album pour y accéder</p>
   </header>
 
-  <main class="gallery">
-    <!-- Photo 1 -->
-    <div class="photo-card">
-      <img src="https://picsum.photos/600/400?random=1" alt="Description photo 1">
-      <div class="photo-info">
-        <span>Coucher de soleil</span>
-        <!-- Coller ici le lien Google Drive de la photo originale -->
-        <a href="LIEN_GOOGLE_DRIVE_PHOTO_1" target="_blank" class="download-btn">Télécharger HD</a>
-      </div>
-    </div>
+  <main class="grid">
 
-    <!-- Photo 2 -->
-    <div class="photo-card">
-      <img src="https://picsum.photos/600/400?random=2" alt="Description photo 2">
-      <div class="photo-info">
-        <span>Paysage en montagne</span>
-        <a href="LIEN_GOOGLE_DRIVE_PHOTO_2" target="_blank" class="download-btn">Télécharger HD</a>
+    <!-- Galerie 1 -->
+    <a href="LIEN_DOSSIER_GOOGLE_DRIVE_1" target="_blank" class="album-card">
+      <img src="https://picsum.photos/600/400?random=10" alt="Vacances 2026">
+      <div class="album-info">
+        <span class="album-title">Vacances 2026</span>
+        <span class="lock-badge">🔒 Accès restreint</span>
       </div>
-    </div>
+    </a>
+
+    <!-- Galerie 2 -->
+    <a href="LIEN_DOSSIER_GOOGLE_DRIVE_2" target="_blank" class="album-card">
+      <img src="https://picsum.photos/600/400?random=11" alt="Fêtes de famille">
+      <div class="album-info">
+        <span class="album-title">Fêtes de famille</span>
+        <span class="lock-badge">🔒 Accès restreint</span>
+      </div>
+    </a>
+
   </main>
 
 </body>
