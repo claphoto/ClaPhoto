@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Portfolio Photo</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 { font-weight: 300; letter-spacing: 2px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .photo-card {
+      background: #1e1e1e;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .photo-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .photo-info {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .download-btn {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .download-btn:hover {
+      background-color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GALERIE PHOTO</h1>
+    <p>Partage familial & clichés personnels</p>
+  </header>
+
+  <main class="gallery">
+    <!-- Photo 1 -->
+    <div class="photo-card">
+      <img src="https://picsum.photos/600/400?random=1" alt="Description photo 1">
+      <div class="photo-info">
+        <span>Coucher de soleil</span>
+        <!-- Coller ici le lien Google Drive de la photo originale -->
+        <a href="LIEN_GOOGLE_DRIVE_PHOTO_1" target="_blank" class="download-btn">Télécharger HD</a>
+      </div>
+    </div>
+
+    <!-- Photo 2 -->
+    <div class="photo-card">
+      <img src="https://picsum.photos/600/400?random=2" alt="Description photo 2">
+      <div class="photo-info">
+        <span>Paysage en montagne</span>
+        <a href="LIEN_GOOGLE_DRIVE_PHOTO_2" target="_blank" class="download-btn">Télécharger HD</a>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
